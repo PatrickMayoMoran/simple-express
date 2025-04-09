@@ -11,7 +11,11 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  const testData = {
+    title: 'Links',
+  }
+
+  res.render('home', testData);
 });
 
 app.listen(port, () => {
