@@ -1,6 +1,9 @@
+require('dotenv').config() // load environment variables
+
 const express = require('express');
 const path = require('path');
-const { engine } = require('express-handlebars')
+const { engine } = require('express-handlebars');
+const { Client } = require('pg');
 
 const app = express();
 const port = 3000
